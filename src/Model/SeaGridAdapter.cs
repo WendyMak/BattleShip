@@ -1,5 +1,4 @@
-
-using Microsoft.VisualBasic;
+using SwinGameSDK;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -59,6 +58,7 @@ public class SeaGridAdapter : ISeaGrid
 	/// <summary>
 	/// Indicates that the grid has been changed
 	/// </summary>
+	
 	public event EventHandler ISeaGrid.Changed;
 
 	/// <summary>
