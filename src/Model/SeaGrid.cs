@@ -3,7 +3,7 @@ using SwinGameSDK;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
+//using System.Data;
 using System.Diagnostics;
 /// <summary>
 /// The SeaGrid is the grid upon which the ships are deployed.
@@ -19,7 +19,7 @@ public class SeaGrid : ISeaGrid
 	private const int _WIDTH = 10;
 
 	private const int _HEIGHT = 10;
-	private Tile[,] _GameTiles = new Tile[Width, Height];
+	private Tile[,] _GameTiles;
 	private Dictionary<ShipName, Ship> _Ships;
 
 	private int _ShipsKilled = 0;
