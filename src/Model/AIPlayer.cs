@@ -1,5 +1,5 @@
 
-using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -129,7 +129,7 @@ public abstract class AIPlayer : Player
 		int i = 0;
 		for (i = 0; i <= 150; i++) {
 			//Dont delay if window is closed
-			if (SwinGame.WindowCloseRequested)
+			if (SwinGame.WindowCloseRequested())
 				return;
 
 			SwinGame.Delay(5);
