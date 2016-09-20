@@ -269,7 +269,7 @@ public static class GameResources
 	{
 		//Font obj = default(Font);
 		foreach (Font obj in _Fonts.Values) {
-			SwinGame.FreeFont(_Fonts.Values[i]);
+			SwinGame.FreeFont(obj);
 		}
 	}
 
@@ -277,7 +277,7 @@ public static class GameResources
 	{
 		//Bitmap obj = default(Bitmap);
 		foreach (Bitmap obj in _Images.Values) {
-			SwinGame.FreeBitmap(_Images.Values[i]);
+			SwinGame.FreeBitmap(obj);
 		}
 	}
 
@@ -285,7 +285,7 @@ public static class GameResources
 	{
 		//SoundEffect obj = default(SoundEffect);
 		foreach (SoundEffect obj in _Sounds.Values) {
-			Audio.FreeSoundEffect(Sounds.Values[i]);
+			Audio.FreeSoundEffect(obj);
 		}
 	}
 
@@ -293,7 +293,7 @@ public static class GameResources
 	{
 		//Music obj = default(Music);
 		foreach (Music obj in _Music.Values) {
-			Audio.FreeMusic(_Music.Values[i]);
+			Audio.FreeMusic(obj);
 		}
 	}
 
