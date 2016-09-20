@@ -118,7 +118,7 @@ static class MenuController
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			int i = 0;
-			for (i = 0; i <= _menuSgit tructure[menu].Length - 1; i++) {
+			for (i = 0; i <= _menuSgit Structure[menu].Length - 1; i++) {
 				//IsMouseOver the i'th button of the menu
 				if (IsMouseOverMenu(i, level, xOffset)) {
 					PerformMenuAction(menu, i);
