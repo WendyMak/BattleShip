@@ -202,7 +202,7 @@ static class MenuController
 			int btnLeft = 0;
 			btnLeft = MENU_LEFT + BUTTON_SEP * (i + xOffset);
 			//SwinGame.FillRectangle(Color.White, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT)
-			SwinGame.DrawTextLines(_menuStructure[menu](i), MENU_COLOR, Color.Black, GameFont("Menu"), FontAlignment.AlignCenter, btnLeft + TEXT_OFFSET, btnTop + TEXT_OFFSET, BUTTON_WIDTH, BUTTON_HEIGHT);
+			SwinGame.DrawTextLines(_menuStructure[menu](i), MENU_COLOR, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, btnLeft + TEXT_OFFSET, btnTop + TEXT_OFFSET, BUTTON_WIDTH, BUTTON_HEIGHT);
 
 			if (SwinGame.MouseDown(MouseButton.LeftButton) & IsMouseOverMenu(i, level, xOffset)) {
 				SwinGame.DrawRectangle(HIGHLIGHT_COLOR, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
@@ -243,15 +243,15 @@ static class MenuController
 	private static void PerformMenuAction(int menu, int button)
 	{
 		switch (menu) {
-			case MAIN_MENU:
-				PerformMainMenuAction(button);
-				break;
-			case SETUP_MENU:
-				PerformSetupMenuAction(button);
-				break;
-			case GAME_MENU:
-				PerformGameMenuAction(button);
-				break;
+		case MAIN_MENU:
+			PerformMainMenuAction(button);
+			break;
+		case SETUP_MENU:
+			PerformSetupMenuAction(button);
+			break;
+		case GAME_MENU:
+			PerformGameMenuAction(button);
+			break;
 		}
 	}
 
@@ -262,18 +262,18 @@ static class MenuController
 	private static void PerformMainMenuAction(int button)
 	{
 		switch (button) {
-			case MAIN_MENU_PLAY_BUTTON:
-				GameController.StartGame();
-				break;
-			case MAIN_MENU_SETUP_BUTTON:
-				GameController.AddNewState(GameState.AlteringSettings);
-				break;
-			case MAIN_MENU_TOP_SCORES_BUTTON:
-				GameController.AddNewState(GameState.ViewingHighScores);
-				break;
-			case MAIN_MENU_QUIT_BUTTON:
-				GameController.EndCurrentState();
-				break;
+		case MAIN_MENU_PLAY_BUTTON:
+			GameController.StartGame();
+			break;
+		case MAIN_MENU_SETUP_BUTTON:
+			GameController.AddNewState(GameState.AlteringSettings);
+			break;
+		case MAIN_MENU_TOP_SCORES_BUTTON:
+			GameController.AddNewState(GameState.ViewingHighScores);
+			break;
+		case MAIN_MENU_QUIT_BUTTON:
+			GameController.EndCurrentState();
+			break;
 		}
 	}
 
@@ -284,15 +284,15 @@ static class MenuController
 	private static void PerformSetupMenuAction(int button)
 	{
 		switch (button) {
-			case SETUP_MENU_EASY_BUTTON:
-				GameController.SetDifficulty(AIOption.Hard);
-				break;
-			case SETUP_MENU_MEDIUM_BUTTON:
-				GameController.SetDifficulty(AIOption.Hard);
-				break;
-			case SETUP_MENU_HARD_BUTTON:
-				GameController.SetDifficulty(AIOption.Hard);
-				break;
+		case SETUP_MENU_EASY_BUTTON:
+			GameController.SetDifficulty(AIOption.Hard);
+			break;
+		case SETUP_MENU_MEDIUM_BUTTON:
+			GameController.SetDifficulty(AIOption.Hard);
+			break;
+		case SETUP_MENU_HARD_BUTTON:
+			GameController.SetDifficulty(AIOption.Hard);
+			break;
 		}
 		//Always end state - handles exit button as well
 		GameController.EndCurrentState();
@@ -305,18 +305,18 @@ static class MenuController
 	private static void PerformGameMenuAction(int button)
 	{
 		switch (button) {
-			case GAME_MENU_RETURN_BUTTON:
-				GameController.EndCurrentState();
-				break;
-			case GAME_MENU_SURRENDER_BUTTON:
-				GameController.EndCurrentState();
-				//end game menu
-				GameController.EndCurrentState();
-				//end game
-				break;
-			case GAME_MENU_QUIT_BUTTON:
-				GameController.AddNewState(GameState.Quitting);
-				break;
+		case GAME_MENU_RETURN_BUTTON:
+			GameController.EndCurrentState();
+			break;
+		case GAME_MENU_SURRENDER_BUTTON:
+			GameController.EndCurrentState();
+			//end game menu
+			GameController.EndCurrentState();
+			//end game
+			break;
+		case GAME_MENU_QUIT_BUTTON:
+			GameController.AddNewState(GameState.Quitting);
+			break;
 		}
 	}
 }
