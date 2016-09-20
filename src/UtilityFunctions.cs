@@ -133,9 +133,10 @@ static class UtilityFunctions
 				draw = true;
 
 				switch (grid[row, col]) {
-					case TileView.Ship:
+					/*case TileView.Ship:
 						draw = false;
 						break;
+					*/
 					//If small Then fillColor = _SMALL_SHIP Else fillColor = _LARGE_SHIP
 					case TileView.Miss:
 						if (small)
@@ -194,7 +195,7 @@ static class UtilityFunctions
 			}
 
 			if (!small) {
-				SwinGame.DrawBitmap(GameResources.GameResources.GameImage(shipName), colLeft, rowTop);
+				SwinGame.DrawBitmap(GameResources.GameImage(shipName), colLeft, rowTop);
 			} else {
 				SwinGame.FillRectangle(SHIP_FILL_COLOR, colLeft, rowTop, shipWidth, shipHeight);
 				SwinGame.DrawRectangle(SHIP_OUTLINE_COLOR, colLeft, rowTop, shipWidth, shipHeight);
