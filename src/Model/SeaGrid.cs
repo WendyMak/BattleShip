@@ -1,5 +1,5 @@
 
-using SwinGameSDK;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,9 +26,7 @@ public class SeaGrid : ISeaGrid
 	/// <summary>
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
-
-    
-    public event EventHandler Changed;
+	public event EventHandler Changed;
 
 	/// <summary>
 	/// The width of the sea grid.
@@ -61,7 +59,6 @@ public class SeaGrid : ISeaGrid
 	/// <param name="x">x coordinate of the tile</param>
 	/// <param name="y">y coordiante of the tile</param>
 	/// <returns></returns>
-	
 	public TileView this[int x, int y]
 	{
 		get { return _GameTiles[x, y].View; }
@@ -87,12 +84,12 @@ public class SeaGrid : ISeaGrid
 	/// </summary>
 	public SeaGrid(Dictionary<ShipName, Ship> ships)
 	{
-		//fill array with empty Tiles
 		_GameTiles = new Tile[Width, Height];
+		//fill array with empty Tiles
 		int i = 0;
 		for (i = 0; i <= Width - 1; i++) {
 			for (int j = 0; j <= Height - 1; j++) {
-				_GameTiles = new Tile[i, j];
+				_GameTiles[i, j] = new Tile(i, j, null);
 			}
 		}
 

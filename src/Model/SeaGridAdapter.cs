@@ -1,4 +1,5 @@
-using SwinGameSDK;
+
+using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,7 +44,6 @@ public class SeaGridAdapter : ISeaGrid
 	/// <param name="x">tile x coordinate</param>
 	/// <param name="y">tile y coordinate</param>
 	/// <returns>a tile, either what it actually is, or if it was a ship then return a sea tile</returns>
-
 	public TileView this[int x, int y] {
 		get {
 			TileView result = _MyGrid[x, y];
@@ -59,7 +59,6 @@ public class SeaGridAdapter : ISeaGrid
 	/// <summary>
 	/// Indicates that the grid has been changed
 	/// </summary>
-	
 	public event EventHandler Changed;
 
 	/// <summary>

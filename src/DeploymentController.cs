@@ -172,7 +172,7 @@ static class DeploymentController
 	{
 		foreach (ShipName sn in Enum.GetValues(typeof(ShipName))) {
 			int i = 0;
-			i = ((int)sn) - 1;
+			i =((int)sn) - 1;
 
 			if (UtilityFunctions.IsMouseInRectangle(SHIPS_LEFT, SHIPS_TOP + i * SHIPS_HEIGHT, SHIPS_WIDTH, SHIPS_HEIGHT)) {
 				return sn;
@@ -182,10 +182,3 @@ static class DeploymentController
 		return ShipName.None;
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================
