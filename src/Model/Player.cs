@@ -193,6 +193,9 @@ public class Player : IEnumerable<Ship>
 			case ResultOfAttack.Miss:
 				_misses += 1;
 				break;
+			default:
+				_shots = _shots - 1;
+				break;
 		}
 
 		return result;

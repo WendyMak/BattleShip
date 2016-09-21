@@ -125,7 +125,7 @@ public class Tile
 				_Ship.Hit();
 			}
 		} else {
-			throw new ApplicationException("You have already shot this square");
+			throw new ApplicationException("You have already shot at this square");
 		}
 	}
 }
