@@ -67,7 +67,7 @@ static class HighScoreController
 
 		//Read in the # of scores
 		int numScores = 0;
-		numScores = Convert.ToInt32(input.ReadLine());
+		numScores = 10;//Convert.ToInt32(input.ReadLine());
 
 		_Scores.Clear();
 
