@@ -62,7 +62,7 @@ static class DeploymentController
 			GameController.HumanPlayer.RandomizeDeployment();
 		}
 
-		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
+		if (SwinGame.MouseClicked(MouseButton.LeftButton) | SwinGame.MouseClicked(MouseButton.RightButton)) {
 			ShipName selected = default(ShipName);
 			selected = GetShipMouseIsOver();
 			if (selected != ShipName.None) {
