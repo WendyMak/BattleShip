@@ -51,7 +51,7 @@ static class DeploymentController
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
 
-		if (SwinGame.KeyTyped(KeyCode.vk_UP) | SwinGame.KeyTyped(KeyCode.vk_DOWN)) {
+		if (SwinGame.KeyTyped(KeyCode.vk_UP)) {
 			_currentDirection = Direction.UpDown;
 		}
 		if (SwinGame.KeyTyped(KeyCode.vk_RIGHT)) {
