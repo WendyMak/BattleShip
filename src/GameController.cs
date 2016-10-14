@@ -68,11 +68,14 @@ public static class GameController
 	/// </remarks>
 	public static void StartGame()
 	{
+		
 		if (_theGame != null)
 			EndGame();
 
 		//Create the game
 		_theGame = new BattleShipsGame();
+
+		SwinGame.ToggleFullScreen (); 
 
 		//create the players
 		switch (_aiSetting) {
@@ -94,6 +97,8 @@ public static class GameController
 		_theGame.AttackCompleted += AttackCompleted;
 
 		AddNewState(GameState.Deploying);
+	
+
 	}
 
 	/// <summary>
