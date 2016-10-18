@@ -75,8 +75,6 @@ public static class GameController
 		//Create the game
 		_theGame = new BattleShipsGame();
 
-		SwinGame.ToggleFullScreen (); 
-
 		//create the players
 		switch (_aiSetting) {
 			case AIOption.Medium:
@@ -277,6 +275,9 @@ public static class GameController
 	{
 		//Read incoming input events
 		SwinGame.ProcessEvents();
+
+		if(SwinGame.KeyTyped(KeyCode.vk_f))
+			SwinGame.ToggleFullScreen ();
 
 		switch (CurrentState) {
 			case GameState.ViewingMainMenu:
