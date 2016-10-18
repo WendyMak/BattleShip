@@ -26,7 +26,7 @@ static class DiscoveryController
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
 
-		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
+		if (SwinGame.MouseClicked(MouseButton.LeftButton) | SwinGame.MouseClicked(MouseButton.RightButton)) {
 			DoAttack();
 		}
 	}
